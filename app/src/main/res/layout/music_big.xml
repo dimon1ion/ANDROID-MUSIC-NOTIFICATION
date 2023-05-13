@@ -1,0 +1,126 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+xmlns:android="http://schemas.android.com/apk/res/android"
+xmlns:tools="http://schemas.android.com/tools"
+android:id="@+id/layout_root"
+android:layout_width="match_parent"
+android:layout_height="100dp"
+    android:background="#353535">
+
+<ImageView
+    android:id="@+id/image_music"
+    android:layout_width="100dp"
+    android:layout_height="100dp"
+    android:scaleType="centerCrop"
+    android:src="@mipmap/ic_launcher"
+    />
+
+<TextView
+    android:id="@+id/text_music_name"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_toEndOf="@+id/image_music"
+    android:layout_alignParentTop="true"
+    android:layout_marginStart="12dp"
+    android:layout_marginTop="12dp"
+    android:layout_marginBottom="2dp"
+    android:textColor="@color/white"
+    android:textSize="16sp"
+    android:singleLine="true"
+    tools:text="Title"
+    android:ellipsize="marquee"
+    android:marqueeRepeatLimit="marquee_forever"
+    />
+
+<TextView
+    android:id="@+id/text_music_singer"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_alignStart="@+id/text_music_name"
+    android:layout_below="@id/text_music_name"
+    android:layout_marginBottom="8dp"
+    android:textColor="@color/white"
+    android:textSize="14sp"
+    android:singleLine="true"
+    tools:text="Singer"
+    />
+
+<RelativeLayout
+    android:id="@+id/layout_controls"
+    android:layout_width="match_parent"
+    android:layout_height="48dp"
+    android:layout_toEndOf="@+id/image_music"
+    android:layout_alignParentBottom="true">
+
+    <FrameLayout
+        android:id="@+id/frame_playPrev"
+        android:layout_width="48dp"
+        android:layout_height="48dp"
+        android:layout_centerVertical="true"
+        android:clickable="true"
+        android:layout_alignParentStart="true"
+        >
+
+        <ImageButton
+            android:id="@+id/btn_prev"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:src="@drawable/baseline_skip_previous_24"
+            android:layout_gravity="center"
+            android:background="@null"
+            />
+    </FrameLayout>
+
+    <FrameLayout
+        android:id="@+id/frame_fr"
+        android:layout_width="48dp"
+        android:layout_height="48dp"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:clickable="true"
+        android:layout_toEndOf="@id/frame_playPrev" >
+        <ImageButton
+            android:id="@+id/btn_play"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:src="@drawable/baseline_play_arrow_24"
+            android:layout_gravity="center"
+            android:background="@null"
+            />
+    </FrameLayout>
+
+    <FrameLayout
+        android:id="@+id/frame_playNext"
+        android:layout_width="48dp"
+        android:layout_height="48dp"
+        android:layout_centerVertical="true"
+        android:layout_toEndOf="@+id/frame_fr"
+        android:clickable="true" >
+
+        <ImageButton
+            android:id="@+id/btn_next"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:src="@drawable/baseline_skip_next_24"
+            android:layout_gravity="center"
+            android:background="@null"
+            />
+    </FrameLayout>
+    <FrameLayout
+        android:id="@+id/frame_close"
+        android:layout_width="48dp"
+        android:layout_height="48dp"
+        android:layout_alignParentEnd="true"
+        android:clickable="true" >
+
+        <ImageButton
+            android:id="@+id/btn_fav"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:src="@drawable/baseline_favorite_border_24"
+            android:layout_gravity="center"
+            android:background="@null"
+            />
+    </FrameLayout>
+</RelativeLayout>
+</RelativeLayout>
